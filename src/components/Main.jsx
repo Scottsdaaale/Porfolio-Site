@@ -8,14 +8,12 @@ import { Container, Row } from "react-bootstrap";
 
 function Main() {
   return (
-    <Container className="main">
-      <Row>
+    <Container>
         <Intro />
         <About />
         <Experience />
         <Projects />
         <Contact />
-      </Row>
     </Container>
   );
 }
