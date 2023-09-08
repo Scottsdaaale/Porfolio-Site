@@ -1,11 +1,9 @@
 body {
-  /* background: url("../public/background.jpg"); */
   background-color: rgb(26, 26, 26);
-  margin: 0; /* Reset margin to remove any default spacing */
-  padding: 0; /* Reset padding to remove any default spacing */
-  /* font-family: Consolas, 'Courier New', monospace; */
+  color: white;
+  margin: 0;
 }
 
-/* .main {
-  background-color: red;
-} */
+.main {
+
+}
