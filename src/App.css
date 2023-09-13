@@ -4,6 +4,29 @@ body {
   margin: 0;
 }
 
-.main {
+h1 {
+  font-size: 18px;
+}
 
+h2 {
+  font-size: 15px;
+}
+
+h3 {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+h4 {
+  font-size: 14px;
+}
+
+p {
+  font-size: 14px;
+  color: grey;
+}
+
+li {
+  font-size: 15px;
+  color: grey;
 }
