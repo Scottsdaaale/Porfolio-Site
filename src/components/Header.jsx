@@ -1,6 +1,5 @@
 import React from 'react';
 import { Navbar, Container } from 'react-bootstrap';
-import logoImage from '../images/Pixel-logo.png'; // Import your image here
 
 function Header() {
 
