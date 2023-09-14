@@ -15,10 +15,8 @@ h2 {
 h3 {
   font-size: 14px;
   font-weight: normal;
-}
+  color: rgb(223, 223, 223);
 
-h4 {
-  font-size: 14px;
 }
 
 p {
@@ -27,6 +25,14 @@ p {
 }
 
 li {
-  font-size: 15px;
+  font-size: 14px;
   color: grey;
+}
+
+.hoverable {
+  transition: transform 0.3s ease-in-out;
+}
+
+.hoverable:hover {
+  transform: scale(1.1);
 }
