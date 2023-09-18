@@ -1,9 +1,9 @@
 import React from "react";
-import Intro from "./sections/Intro";
-import About from "./sections/About";
-import Experience from "./sections/Experience";
-import Projects from "./sections/Projects";
-import Contact from "./sections/Contact";
+import Intro from "./Developer/Intro";
+import About from "./Developer/About";
+import Experience from "./Developer/Experience";
+import Projects from "./Developer/Projects";
+import Contact from "./Developer/Contact";
 import { Container, Row } from "react-bootstrap";
 
 function Main() {
