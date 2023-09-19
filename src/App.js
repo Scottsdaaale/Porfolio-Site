@@ -2,9 +2,12 @@ import React from "react";
 import "./App.css";
 import Main from "./components/Main";
 import Header from "./components/Header";
+import Music from "./components/Music"; 
+import Sandbox from "./components/Sandbox"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Container from "react-bootstrap/Container";
-import Music from "./components/Music"; // Import the Music component (you need to create this component)
+
+
 
 function App() {
   return (
@@ -14,6 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Main className="main" />} />
           {/* <Route path="/music" element={<Music />} />  */}
+          <Route path="/sandbox" element={<Sandbox />} />
         </Routes>
       </Router>
     </div>
