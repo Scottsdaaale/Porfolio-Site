@@ -36,3 +36,24 @@ li {
 .hoverable:hover {
   transform: scale(1.1);
 }
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(26, 26, 26, 0.9); /* Adjust the background color and opacity as needed */
+}
+
+/* .header {
+  padding: 0;
+} */
+
+.hoverable-image {
+  opacity: 1; /* Full opacity */
+  transition: opacity 0.3s ease; /* Smooth transition over 0.3 seconds */
+}
+
+/* When the user scrolls down, decrease the opacity */
+.scrolling .hoverable-image {
+  opacity: 0.5; /* Reduced opacity */
+}
