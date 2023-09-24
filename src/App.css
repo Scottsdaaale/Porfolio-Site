@@ -57,3 +57,31 @@ li {
 .scrolling .hoverable-image {
   opacity: 0.5; /* Reduced opacity */
 }
+
+/* .img-fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.h1-fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-in-out 1s; 
+}
+
+.p-fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-in-out 2s; 
+}
+
+.fade-in {
+  opacity: 1;
+} */
+
+.fade-in-container {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.fade-in {
+  opacity: 1;
+}
