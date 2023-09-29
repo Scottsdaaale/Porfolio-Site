@@ -1,6 +1,8 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import contact from "../../images/Contact.png";
+import useImageToggle from "../useImageToggle"; // Import the custom hook
+import contactPng from "../../images/Contact.png";
+import contactGif from "../../images/Computer.gif"; // Import the GIF image
 
 const contactInfo = [
   { label: "Email", value: <a href="mailto:ScottPetersonSE@gmail.com">ScottPetersonSE@gmail.com</a> },
@@ -28,13 +30,22 @@ function ContactItem({ label, value }) {
 }
 
 function Contact() {
+  // Use the custom hook for the contact image
+  const contactImage = useImageToggle(contactPng, contactGif);
+
   return (
     <Container style={{ maxWidth: "500px", marginBottom: "30px" }}>
       <h2 style={{ marginBottom: "20px" }}>Contact</h2>
       <Container>
         <Row className="d-flex align-items-center">
           <Col xs={3} md={2} lg={2}>
-            <img src={contact} alt="Contact" className="img-fluid" />
+            <img
+              src={contactImage.currentImage}
+              alt="Contact"
+              className="img-fluid"
+              onMouseEnter={contactImage.handleMouseEnter}
+              onMouseLeave={contactImage.handleMouseLeave}
+            />
           </Col>
           <Col xs={9} md={7} lg={9}>
             <Container>
