@@ -10,17 +10,11 @@ import FadeInWrapper from "./FadeInWrapper";
 function Main() {
   return (
     <Container>
-        <Intro />
+      <Intro />
       <FadeInWrapper delay={5000}>
         <About />
-      </FadeInWrapper>
-      <FadeInWrapper delay={5000}>
         <Experience />
-      </FadeInWrapper>
-      <FadeInWrapper delay={5000}>
         <Projects />
-      </FadeInWrapper>
-      <FadeInWrapper delay={5000}>
         <Contact />
       </FadeInWrapper>
     </Container>
