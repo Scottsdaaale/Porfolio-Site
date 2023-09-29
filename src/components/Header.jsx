@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Navbar, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import computer from "../images/Computer.gif";
-import music from "../images/Speaker4.png";
-import externalLink from "../images/ExternalLink.png";
-import tool from "../images/Tool2.gif";
+import useImageToggle from "./useImageToggle";
+import computerPng from "../images/Computer2.png";
+import computerGif from "../images/Computer.gif";
+import externalLinkPng from "../images/ExternalLink.png";
+import externalLinkGif from "../images/ExternalLink.gif";
+import toolPng from "../images/Tool.png";
+import toolGif from "../images/Tool2.gif";
 
 const Header = () => {
   const [scrolling, setScrolling] = useState(false);
@@ -27,48 +30,61 @@ const Header = () => {
     };
   }, []);
 
+  const computerImage = useImageToggle(computerPng, computerGif);
+  const toolImage = useImageToggle(toolPng, toolGif);
+  const externalLinkImage = useImageToggle(externalLinkPng, externalLinkGif);
+
   return (
     <Navbar className={`sticky-top ${scrolling ? "scrolling" : ""}`}>
       <Nav className="ms-auto">
-        <Navbar.Brand as={Link} to="/" className={`hoverable ${scrolling ? "scrolling" : ""}`}>
+        <Navbar.Brand
+          as={Link}
+          to="/"
+          className={`hoverable ${scrolling ? "scrolling" : ""}`}
+        >
           <img
-            src={computer}
+            src={computerImage.currentImage}
             alt="Computer"
             width="40"
             height="40"
             className="hoverable-image"
             style={{ marginRight: "10px" }}
+            onMouseEnter={computerImage.handleMouseEnter}
+            onMouseLeave={computerImage.handleMouseLeave}
           />
         </Navbar.Brand>
 
-        {/* <Navbar.Brand as={Link} to="/music" className={`hoverable ${scrolling ? "scrolling" : ""}`}>
+        <Navbar.Brand
+          as={Link}
+          to="/sandbox"
+          className={`hoverable ${scrolling ? "scrolling" : ""}`}
+        >
           <img
-            src={music}
-            alt="Music"
-            width="40"
-            height="40"
-            className="hoverable-image"
-            style={{ marginRight: "10px" }}
-          />
-        </Navbar.Brand> */}
-        <Navbar.Brand as={Link} to="/sandbox" className={`hoverable ${scrolling ? "scrolling" : ""}`}>
-          <img
-            src={tool}
+            src={toolImage.currentImage}
             alt="Sandbox page"
             width="40"
             height="40"
             className="hoverable-image"
             style={{ marginRight: "10px" }}
+            onMouseEnter={toolImage.handleMouseEnter}
+            onMouseLeave={toolImage.handleMouseLeave}
           />
-        </Navbar.Brand> 
-        <Navbar.Brand as={Link} to="https://linktr.ee/scottsdaaale" target="_blank" className={`hoverable ${scrolling ? "scrolling" : ""}`}>
+        </Navbar.Brand>
+        <Navbar.Brand
+          as="a"
+          href="https://linktr.ee/scottsdaaale"
+          target="_blank"
+          className={`hoverable ${scrolling ? "scrolling" : ""}`}
+        >
           <img
-            src={externalLink}
+            src={externalLinkImage.currentImage}
             alt="External Link"
             width="40"
             height="40"
             className="hoverable-image"
-            style={{ marginRight: "10px" }} 
+            style={{ marginRight: "10px" }}
+            onMouseEnter={externalLinkImage.handleMouseEnter}
+            onMouseLeave={externalLinkImage.handleMouseLeave}
           />
         </Navbar.Brand>
       </Nav>
