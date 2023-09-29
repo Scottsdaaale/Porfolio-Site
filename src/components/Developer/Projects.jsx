@@ -1,10 +1,15 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import genrescope from "../../images/GenreScope.png";
-import myclip from "../../images/MyClip.png";
-import hypertyper from "../../images/HyperTyper.png";
+import useImageToggle from "../useImageToggle";
+import genrescopePng from "../../images/GenreScope.png";
+import genrescopeGif from "../../images/GenreScope.gif";
+import myclipPng from "../../images/MyClip.png";
+import myclipGif from "../../images/Computer.gif";
+import hypertyperPng from "../../images/HyperTyper.png";
+import hypertyperGif from "../../images/HyperTyper.gif";
 
-function Project({ title, description, image, githubLink }) {
+function Project({ title, description, png, gif, githubLink }) {
+  const jobImage = useImageToggle(png, gif);
   return (
     <Container>
       <Row className="d-flex align-items-center">
@@ -14,7 +19,14 @@ function Project({ title, description, image, githubLink }) {
         </Col>
         <Col xs={2} md={2} lg={2}>
           <a href={githubLink} target="_blank" rel="noopener noreferrer">
-            <img src={image} alt="Project" style={{ width: "100%" }} className="hoverable" />
+            <img
+              src={jobImage.currentImage}
+              alt="Project"
+              style={{ width: "100%" }}
+              className="hoverable"
+              onMouseEnter={jobImage.handleMouseEnter}
+              onMouseLeave={jobImage.handleMouseLeave}
+            />
           </a>
         </Col>
       </Row>
@@ -26,20 +38,26 @@ function Projects() {
   const projectInfo = [
     {
       title: "GenreScope",
-      description: "Allows users to discover new music by searching through thousands of genres. Find artists, videos, songs, and playlists.",
-      image: genrescope,
+      description:
+        "Allows users to discover new music by searching through thousands of genres. Find artists, videos, songs, and playlists.",
+      png: genrescopePng,
+      gif: genrescopeGif,
       githubLink: "https://github.com/Scottsdaaale/GenreScope",
     },
     {
       title: "MyClip",
-      description: "A video game clip social media site. Features login, comment, and star rating systems.",
-      image: myclip,
+      description:
+        "A video game clip social media site. Features login, comment, and star rating systems.",
+      png: myclipPng,
+      gif: myclipGif,
       githubLink: "https://github.com/Scottsdaaale/MyClip",
     },
     {
       title: "HyperTyper",
-      description: "HyperTyper is a simple speed typing app made collaboratively during my time at Flatiron School.",
-      image: hypertyper,
+      description:
+        "HyperTyper is a simple speed typing app made collaboratively during my time at Flatiron School.",
+      png: hypertyperPng,
+      gif: hypertyperGif,
       githubLink: "https://github.com/Scottsdaaale/HyperTyper",
     },
   ];
@@ -52,7 +70,8 @@ function Projects() {
           key={index}
           title={info.title}
           description={info.description}
-          image={info.image}
+          png={info.png}
+          gif={info.gif}
           githubLink={info.githubLink}
         />
       ))}
