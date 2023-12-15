@@ -40,6 +40,9 @@ function Sandbox() {
           <Popup />
         </Col>
         <Col className="mb-4">
+          <RandomQuotes />
+        </Col>
+        <Col className="mb-4">
           <Clock />
         </Col>
         <Row>
@@ -50,11 +53,7 @@ function Sandbox() {
             <ColorWriteOutText />
           </Col>
         </Row>
-        <Row>
-          <Col className="mb-4">
-            <RandomQuotes />
-          </Col>
-        </Row>
+        <Row></Row>
       </Row>
     </Container>
   );
