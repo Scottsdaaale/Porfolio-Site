@@ -5,7 +5,12 @@ import contactPng from "../../images/Contact.png";
 import contactGif from "../../images/Contact.gif"; // Import the GIF image
 
 const contactInfo = [
-  { label: "Email", value: <a href="mailto:ScottPetersonSE@gmail.com">ScottPetersonSE@gmail.com</a> },
+  {
+    label: "Email",
+    value: (
+      <a href="mailto:ScottPetersonSE@gmail.com">ScottPetersonSE@gmail.com</a>
+    ),
+  },
   {
     label: "LinkedIn",
     value: (
@@ -22,10 +27,12 @@ const contactInfo = [
 
 function ContactItem({ label, value }) {
   return (
-    <React.Fragment>
-      <p className="m-0 p-2" style={{ color: "white" }}>{label}</p>
-      <p className="m-0 p-2"> {value}</p>
-    </React.Fragment>
+    <>
+      <p className="m-0 b-1 pt-1" style={{ color: "white" }}>
+        {label}
+      </p>
+      <p className="m-0 pb-1 pt-1"> {value}</p>
+    </>
   );
 }
 
@@ -54,11 +61,20 @@ function Contact() {
                   display: "grid",
                   gridTemplateRows: "repeat(2, 1fr)",
                   gridTemplateColumns: "repeat(2, 1fr)",
-                  width: "250px",
+                  width: "240px",
                 }}
               >
                 {contactInfo.map((info, index) => (
-                  <ContactItem key={index} label={info.label} value={info.value} />
+                  <ContactItem
+                    key={index}
+                    label={info.label}
+                    value={info.value}
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
+                  />
                 ))}
               </div>
             </Container>
