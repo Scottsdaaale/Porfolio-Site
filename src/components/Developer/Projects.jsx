@@ -4,10 +4,10 @@ import useImageToggle from "../useImageToggle";
 import genrescopePng from "../../images/GenreScope.png";
 import genrescopeGif from "../../images/GenreScope.gif";
 import myclipPng from "../../images/MyClip.png";
-import myclipGif from "../../images/Computer.gif";
+import myclipGif from "../../images/MyClip.gif";
 import hypertyperPng from "../../images/HyperTyper.png";
 import hypertyperGif from "../../images/HyperTyper.gif";
-
+ 
 function Project({ title, description, png, gif, githubLink }) {
   const jobImage = useImageToggle(png, gif);
   return (
@@ -55,7 +55,7 @@ function Projects() {
     {
       title: "HyperTyper",
       description:
-        "HyperTyper is a simple speed typing app made collaboratively during my time at Flatiron School.",
+        "A simple speed typing app made collaboratively during my time at Flatiron School.",
       png: hypertyperPng,
       gif: hypertyperGif,
       githubLink: "https://github.com/Scottsdaaale/HyperTyper",
