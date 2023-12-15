@@ -28,7 +28,7 @@ const contactInfo = [
 function ContactItem({ label, value }) {
   return (
     <>
-      <p className="m-0 b-1 pt-1" style={{ color: "white" }}>
+      <p className="m-0 pt-1 pt-1" style={{ color: "white" }}>
         {label}
       </p>
       <p className="m-0 pb-1 pt-1"> {value}</p>
@@ -55,7 +55,7 @@ function Contact() {
             />
           </Col>
           <Col xs={9} md={7} lg={9}>
-            <Container>
+            <Container className="p-0">
               <div
                 style={{
                   display: "grid",
@@ -69,11 +69,6 @@ function Contact() {
                     key={index}
                     label={info.label}
                     value={info.value}
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                    }}
                   />
                 ))}
               </div>
