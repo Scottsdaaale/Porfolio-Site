@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { setVisitedRoot } from "../redux/visitedSlice";
 import "../Sandbox.css";
 import Buttons from "./Sandbox/Buttons";
 import SandboxPopup from "./SandboxPopup";
@@ -7,11 +9,20 @@ import ColorChange from "./Sandbox/Widgets/ColorChange";
 import Popup from "./Sandbox/Widgets/Popup";
 import Clock from "./Sandbox/Widgets/Clock";
 import Translator from "./Sandbox/Widgets/Translator/Translator";
+import WriteOutText from "./Sandbox/Widgets/WriteOutText";
+import ColorWriteOutText from "./Sandbox/Widgets/ColorWriteOutText";
+import RandomQuotes from "./Sandbox/Widgets/RandomQuotes/RandomQuotes";
 import { Container, Row, Col } from "react-bootstrap";
 
 function Sandbox() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(setVisitedRoot(true));
+  }, [dispatch]);
+
   return (
-    <Container >
+    <Container>
       <SandboxPopup />
       <Row>
         <Col className="mb-4">
@@ -31,7 +42,19 @@ function Sandbox() {
         <Col className="mb-4">
           <Clock />
         </Col>
-        <Col></Col>
+        <Row>
+          <Col className="mb-4">
+            <WriteOutText />
+          </Col>
+          <Col className="mb-4">
+            <ColorWriteOutText />
+          </Col>
+        </Row>
+        <Row>
+          <Col className="mb-4">
+            <RandomQuotes />
+          </Col>
+        </Row>
       </Row>
     </Container>
   );

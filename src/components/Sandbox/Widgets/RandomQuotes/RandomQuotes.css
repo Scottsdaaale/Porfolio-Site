@@ -1,0 +1,30 @@
+/* AccordionMenu.css */
+
+/* Style for the accordion menu container */
+.accordion-menu {
+  width: 100%;
+  max-width: 600px; /* Set the maximum width as needed */
+  margin: 0 auto;
+}
+
+/* Style for each accordion item */
+.accordion-item {
+  margin-bottom: 5px;
+}
+
+/* Style for accordion title */
+.accordion-title {
+  background-color: #494949;
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* Style for accordion content */
+.accordion-content {
+  padding: 10px;
+  background-color: #2b2b2b;
+}
+/* Style for active accordion title */
+.accordion-title.active {
+  background-color: #868686;
+}
