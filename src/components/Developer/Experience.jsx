@@ -28,7 +28,7 @@ function Job({
   return (
     <Container>
       <Row>
-        <Col xs={2} md={2} lg={2}>
+        <Col xs={3} md={2} lg={2}>
           <a
             href={link}
             target="_blank"

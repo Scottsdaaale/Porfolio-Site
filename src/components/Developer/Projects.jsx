@@ -17,7 +17,7 @@ function Project({ title, description, png, gif, githubLink }) {
           <h3>{title}</h3>
           <p>{description}</p>
         </Col>
-        <Col xs={2} md={2} lg={2}>
+        <Col xs={3} md={2} lg={2}>
           <a href={githubLink} target="_blank" rel="noopener noreferrer">
             <img
               src={jobImage.currentImage}
