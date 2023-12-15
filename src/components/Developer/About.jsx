@@ -1,8 +1,8 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import useImageToggle from "../useImageToggle"; // Import the custom hook
-import plantPng from "../../images/Plant1.png";
-import plantGif from "../../images/Computer.gif"; 
+import useImageToggle from "../useImageToggle";
+import plantPng from "../../images/Plant.png";
+import plantGif from "../../images/Plant.gif";
 
 function About() {
   // Use the custom hook for the plant image
@@ -15,10 +15,12 @@ function About() {
           <h2 style={{ marginBottom: "20px" }}>About</h2>
           <Container>
             <p>
-              Experienced developer with a strong customer service background.
-              Excels in team collaboration, problem-solving, and achieving
-              company objectives. Leveraging my customer service skills to
-              resolve challenges and create websites.
+              Creative web developer with 2 years of experience. Effective
+              communicator and adept problem-solver. Spearheaded a startup from
+              inception. Proficient in crafting innovative, user-friendly
+              websites. Enthusiastic about designing visually captivating
+              interfaces and optimizing user experiences. Eager to apply skills
+              and expertise to drive success within a vibrant organization.
             </p>
           </Container>
         </Col>
