@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 function FadeInWrapper({ children, delay }) {
+  const hasVisitedRoot = useSelector((state) => state.visited.hasVisitedRoot);
+
   const [fadeIn, setFadeIn] = useState(false);
 
   useEffect(() => {
@@ -13,7 +16,13 @@ function FadeInWrapper({ children, delay }) {
     return () => clearTimeout(timeoutId);
   }, [delay]);
 
-  return <div className={`fade-in-container ${fadeIn ? "fade-in" : ""}`}>{children}</div>;
+  return !hasVisitedRoot ? (
+    <div className={`fade-in-container ${fadeIn ? "fade-in" : ""}`}>
+      {children}
+    </div>
+  ) : (
+    <>{children}</>
+  );
 }
 
 export default FadeInWrapper;
