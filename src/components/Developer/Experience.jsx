@@ -2,12 +2,14 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { Tooltip } from "react-tooltip";
 import useImageToggle from "../useImageToggle";
+import wooliePng from "../../images/Woolie.png"
+import woolieGif from "../../images/Woolie.gif"
 import saturoPng from "../../images/Saturo.png";
 import saturoGif from "../../images/Saturo.gif";
 import liquidPng from "../../images/Liquid2.png";
-import liquidGif from "../../images/Computer.gif";
+import liquidGif from "../../images/Liquid.gif";
 import flatironPng from "../../images/Flatiron2.png";
-import flatironGif from "../../images/Computer.gif";
+import flatironGif from "../../images/Flatiron.gif";
 import certificatePdf from "../../images/FlatironCertificate.pdf";
 
 function Job({
@@ -41,7 +43,7 @@ function Job({
               alt="Job"
               style={{ width: "100%" }}
               className="hoverable"
-              onMouseEnter={jobImage.handleMouseEnter} // Add this line
+              onMouseEnter={jobImage.handleMouseEnter}
               onMouseLeave={jobImage.handleMouseLeave}
             />
           </a>
@@ -66,6 +68,22 @@ function Job({
 function Experience() {
   const jobData = [
     {
+      company: "Woolie.tv",
+      position: "Co-Founder/Lead Developer",
+      duration: "10/2023-present",
+      responsibilities: [
+        "Pioneered the inception and development of a captivating relaxation platform from its conceptual stages to a fully realized, engaging experience.",
+        "Drove engagement strategies leading to a substantial rise in platform adoption and retention rates through active cultivation and nurturing of the user base.",
+        "Iteratively enhanced platform functionality and interface based on user feedback and analytics, ensuring a seamless experience for our expanding user community."
+
+      ],
+      png: wooliePng,
+      gif: woolieGif,
+      link: "https://www.woolie.tv",
+      tooltipContent: "woolie.tv",
+
+    },
+    {
       company: "Saturo Sounds",
       position: "WordPress Engineer",
       duration: "Freelance | 07/2023 - 09/2023",
@@ -77,7 +95,7 @@ function Experience() {
       ],
       png: saturoPng,
       gif: saturoGif,
-      link: "http://www.saturosounds.com",
+      link: "https://www.saturosounds.com",
       tooltipContent: "Saturosounds.com",
     },
     {
