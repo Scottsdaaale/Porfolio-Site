@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import useImageToggle from "../useImageToggle"; // Import the custom hook
 import contactPng from "../../images/Contact.png";
-import contactGif from "../../images/Computer.gif"; // Import the GIF image
+import contactGif from "../../images/Contact.gif"; // Import the GIF image
 
 const contactInfo = [
   { label: "Email", value: <a href="mailto:ScottPetersonSE@gmail.com">ScottPetersonSE@gmail.com</a> },
