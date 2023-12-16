@@ -2,37 +2,40 @@ import { useState, useEffect } from "react";
 
 function useImageToggle(initialImage, alternateImage) {
   const [currentImage, setCurrentImage] = useState(initialImage);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const isMobileDevice = () => {
-      return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-      // You can use additional logic to determine mobile devices more accurately
-      // For example, you might want to check for specific screen sizes using window.innerWidth
+    const checkIfMobile = () => {
+      setIsMobile(/Mobi|Android/i.test(navigator.userAgent));
     };
 
-    const handleResize = () => {
-      if (isMobileDevice()) {
-        setCurrentImage(alternateImage);
-      } else {
-        setCurrentImage(initialImage);
-      }
-    };
+    checkIfMobile();
+    if (isMobile) {
+      setCurrentImage(alternateImage);
+    }
+  }, [alternateImage, isMobile]);
 
-    // Initial check on mount
-    handleResize();
-
-    // Listen for window resize events
-    window.addEventListener("resize", handleResize);
-
-    // Cleanup the event listener on unmount
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, [initialImage, alternateImage]);
-
-  return {
-    currentImage,
+  const handleMouseEnter = () => {
+    if (!isMobile) {
+      setCurrentImage(alternateImage);
+    }
   };
+
+  const handleMouseLeave = () => {
+    if (!isMobile) {
+      setCurrentImage(initialImage);
+    }
+  };
+
+  return isMobile
+    ? {
+        currentImage,
+      }
+    : {
+        currentImage,
+        handleMouseEnter,
+        handleMouseLeave,
+      };
 }
 
 export default useImageToggle;
