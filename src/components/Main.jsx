@@ -9,7 +9,7 @@ import FadeInWrapper from "./FadeInWrapper";
 import useDocumentTitle from "./useDocumentTitle";
 
 function Main() {
-  useDocumentTitle('/');
+  useDocumentTitle('portfolio');
   return (
     <Container>
       <Intro />
