@@ -31,7 +31,7 @@ function ContactItem({ label, value }) {
       <p className="m-0 pt-1 pt-1" style={{ color: "white" }}>
         {label}
       </p>
-      <p className="m-0 pb-1 pt-1"> {value}</p>
+      <p className="m-0 pb-1 pt-1"> {value} </p>
     </>
   );
 }
