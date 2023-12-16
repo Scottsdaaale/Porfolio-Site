@@ -1,84 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Google Tag Manager -->
-    <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-KPDLXBKV");
-    </script>
-    <!-- End Google Tag Manager -->
-    <!-- OG Tags -->
-    <meta property="og:title" content="Scotty Peterson's Portfolio" />
-    <meta
-      property="og:description"
-      content="Welcome! I'm Scotty, a passionate web developer specializing in creating responsive and user-friendly websites. Let's collaborate on your next web project!"
-    />
-    <meta property="og:image" content="../src/images/Me2.png" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="YOUR_WEBSITE_URL" />
+<head>
+  <!-- Google Tag Manager -->
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != "dataLayer" ? "&l=" + l : "";
+      j.async = true;
+      j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, "script", "dataLayer", "GTM-KPDLXBKV");
+  </script>
+  <!-- End Google Tag Manager -->
 
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="rgb(128, 128, 128)" />
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5QFWHQ13EM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    <!-- PWA Meta Tags -->
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <!-- <meta name="apple-mobile-web-app-title" content="woolie.tv"> -->
-    <link rel="apple-touch-icon" href="/src/images/apple-touch-icon.png" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/src/images/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/src/images/favicon-16x16.png"
-    />
-    <link rel="manifest" href="/site.webmanifest" />
+  gtag('config', 'G-5QFWHQ13EM');
+</script>
 
-    <!-- Manifest File -->
-    <link rel="manifest" href="/manifest.json" />
+  <!-- Meta Tags -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="rgb(128, 128, 128)" />
 
-    <link rel="icon" href="./favicon.ico" />
+  <!-- OG Tags -->
+  <meta property="og:title" content="Scotty Peterson's Portfolio" />
+  <meta property="og:description" content="Welcome! I'm Scotty, a passionate web developer specializing in creating responsive and user-friendly websites. Let's collaborate on your next web project!" />
+  <meta property="og:image" content="../src/images/Me2.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.scottypeterson.net/" />
 
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <!-- PWA Meta Tags -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <link rel="apple-touch-icon" href="/src/images/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/src/images/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/src/images/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="manifest" href="/manifest.json" />
 
-    <title>Scotty Peterson's Portfolio</title>
-    <meta
-      name="description"
-      content="Welcome! I'm Scotty, a passionate
-    web developer specializing in creating responsive and user-friendly
-    websites. Let's collaborate on your next web project!"
-    />
-    <meta
-      name="keywords"
-      content="web development, front-end development, back-end development, HTML5, CSS3, JavaScript, React.js, Node.js, responsive design, UI/UX, portfolio, projects"
-    />
-  </head>
-  <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript
-      ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-KPDLXBKV"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      ></iframe
-    ></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-  </body>
+  <!-- Manifest File -->
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+  <link rel="icon" href="./favicon.ico" />
+
+  <title>Scotty Peterson's Portfolio</title>
+  <meta name="description" content="Welcome! I'm Scotty, a passionate web developer specializing in creating responsive and user-friendly websites. Let's collaborate on your next web project!" />
+  <meta name="keywords" content="web development, front-end development, back-end development, HTML5, CSS3, JavaScript, React.js, Node.js, responsive design, UI/UX, portfolio, projects" />
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KPDLXBKV" height="0" width="0" style="display: none; visibility: hidden"></iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+</body>
 </html>
