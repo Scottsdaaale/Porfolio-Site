@@ -39,7 +39,7 @@ function Intro() {
               className={`p-fade-in ${fadeIn ? "fade-in" : ""}`} // Apply the "p-fade-in" class conditionally
               style={{ margin: "0" }}
             >
-              Developer, Musician, Cat and Plant Dad
+              Developer, Musician, Plant and Cat Dad
             </p>
           </FadeInWrapper>
         </Col>
