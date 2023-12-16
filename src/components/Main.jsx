@@ -6,8 +6,10 @@ import Projects from "./Developer/Projects";
 import Contact from "./Developer/Contact";
 import { Container } from "react-bootstrap";
 import FadeInWrapper from "./FadeInWrapper";
+import useDocumentTitle from "./useDocumentTitle";
 
 function Main() {
+  useDocumentTitle('/');
   return (
     <Container>
       <Intro />

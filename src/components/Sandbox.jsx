@@ -13,9 +13,15 @@ import WriteOutText from "./Sandbox/Widgets/WriteOutText";
 import ColorWriteOutText from "./Sandbox/Widgets/ColorWriteOutText";
 import RandomQuotes from "./Sandbox/Widgets/RandomQuotes/RandomQuotes";
 import { Container, Row, Col } from "react-bootstrap";
+import useDocumentTitle from "./useDocumentTitle";
 
 function Sandbox() {
+
+  useDocumentTitle('Sandbox');
+
   const dispatch = useDispatch();
+
+
 
   useEffect(() => {
     dispatch(setVisitedRoot(true));
