@@ -17,7 +17,8 @@ function FadeInWrapper({ children, delay }) {
   }, [delay]);
 
   return !hasVisitedRoot ? (
-    <div className={`fade-in-container ${fadeIn ? "fade-in" : ""}`}>
+    <div className={`fade-in-container ${fadeIn ? "fade-in" : ""}`}
+    >
       {children}
     </div>
   ) : (

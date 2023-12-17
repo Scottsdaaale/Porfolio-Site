@@ -8,6 +8,7 @@ import externalLinkPng from "../images/ExternalLink.png";
 import externalLinkGif from "../images/ExternalLink.gif";
 import toolPng from "../images/Tool.png";
 import toolGif from "../images/Tool2.gif";
+import FadeInWrapper from "./FadeInWrapper";
 
 const Header = () => {
   const [scrolling, setScrolling] = useState(false);
@@ -42,33 +43,36 @@ const Header = () => {
           to="/"
           className={`hoverable ${scrolling ? "scrolling" : ""}`}
         >
-          <img
-            src={computerImage.currentImage}
-            alt="Computer"
-            width="40"
-            height="40"
-            className="hoverable-image"
-            style={{ marginRight: "10px" }}
-            onMouseEnter={computerImage.handleMouseEnter}
-            onMouseLeave={computerImage.handleMouseLeave}
-          />
+          <FadeInWrapper delay={5000}>
+            <img
+              src={computerImage.currentImage}
+              alt="Computer"
+              width="40"
+              height="40"
+              className="hoverable-image"
+              style={{ marginRight: "10px" }}
+              onMouseEnter={computerImage.handleMouseEnter}
+              onMouseLeave={computerImage.handleMouseLeave}
+            />
+          </FadeInWrapper>
         </Navbar.Brand>
-
         <Navbar.Brand
           as={Link}
           to="/sandbox"
           className={`hoverable ${scrolling ? "scrolling" : ""}`}
         >
-          <img
-            src={toolImage.currentImage}
-            alt="Sandbox page"
-            width="40"
-            height="40"
-            className="hoverable-image"
-            style={{ marginRight: "10px" }}
-            onMouseEnter={toolImage.handleMouseEnter}
-            onMouseLeave={toolImage.handleMouseLeave}
-          />
+          <FadeInWrapper delay={5200}>
+            <img
+              src={toolImage.currentImage}
+              alt="Sandbox page"
+              width="40"
+              height="40"
+              className="hoverable-image"
+              style={{ marginRight: "10px" }}
+              onMouseEnter={toolImage.handleMouseEnter}
+              onMouseLeave={toolImage.handleMouseLeave}
+            />
+          </FadeInWrapper>
         </Navbar.Brand>
         <Navbar.Brand
           as="a"
@@ -76,16 +80,18 @@ const Header = () => {
           target="_blank"
           className={`hoverable ${scrolling ? "scrolling" : ""}`}
         >
-          <img
-            src={externalLinkImage.currentImage}
-            alt="External Link"
-            width="40"
-            height="40"
-            className="hoverable-image"
-            style={{ marginRight: "10px" }}
-            onMouseEnter={externalLinkImage.handleMouseEnter}
-            onMouseLeave={externalLinkImage.handleMouseLeave}
-          />
+          <FadeInWrapper delay={5400}>
+            <img
+              src={externalLinkImage.currentImage}
+              alt="External Link"
+              width="40"
+              height="40"
+              className="hoverable-image"
+              style={{ marginRight: "10px" }}
+              onMouseEnter={externalLinkImage.handleMouseEnter}
+              onMouseLeave={externalLinkImage.handleMouseLeave}
+            />
+          </FadeInWrapper>
         </Navbar.Brand>
       </Nav>
     </Navbar>

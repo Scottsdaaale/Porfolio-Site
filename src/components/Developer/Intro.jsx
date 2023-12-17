@@ -4,12 +4,6 @@ import logoImage from "../../images/Me.gif";
 import FadeInWrapper from "../FadeInWrapper";
 
 function Intro() {
-  const [fadeIn, setFadeIn] = useState(false);
-
-  useEffect(() => {
-    // Use a state variable to trigger the fade-in effect
-    setFadeIn(true);
-  }, []);
 
   return (
     <Container
@@ -21,7 +15,7 @@ function Intro() {
             <img
               src={logoImage}
               alt="Logo"
-              className={`img-fade-in ${fadeIn ? "fade-in" : ""}`} // Apply the "img-fade-in" class conditionally
+              className=""
               style={{ width: "100%", height: "100%", borderRadius: "50%" }}
             />
           </FadeInWrapper>
@@ -29,14 +23,14 @@ function Intro() {
         <Col xs={7} md={9} className="d-flex flex-column">
           <FadeInWrapper delay={1800}>
             <h1
-              className={`h1-fade-in ${fadeIn ? "fade-in" : ""}`} // Apply the "h1-fade-in" class conditionally
+              className=""
             >
               Hello, my name is Scotty Peterson...
             </h1>
           </FadeInWrapper>
           <FadeInWrapper delay={3000}>
             <p
-              className={`p-fade-in ${fadeIn ? "fade-in" : ""}`} // Apply the "p-fade-in" class conditionally
+              className=""
               style={{ margin: "0" }}
             >
               Developer, Musician, Plant and Cat Dad

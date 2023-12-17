@@ -9,14 +9,20 @@ import FadeInWrapper from "./FadeInWrapper";
 import useDocumentTitle from "./useDocumentTitle";
 
 function Main() {
-  useDocumentTitle('Portfolio');
+  useDocumentTitle("Portfolio");
   return (
     <Container>
       <Intro />
       <FadeInWrapper delay={5000}>
         <About />
+      </FadeInWrapper>
+      <FadeInWrapper delay={5200}>
         <Experience />
+      </FadeInWrapper>
+      <FadeInWrapper delay={5400}>
         <Projects />
+      </FadeInWrapper>
+      <FadeInWrapper delay={5600}>
         <Contact />
       </FadeInWrapper>
     </Container>
