@@ -61,7 +61,7 @@ const Header = () => {
           to="/sandbox"
           className={`hoverable ${scrolling ? "scrolling" : ""}`}
         >
-          <FadeInWrapper delay={5200}>
+          <FadeInWrapper delay={5300}>
             <img
               src={toolImage.currentImage}
               alt="Sandbox page"
@@ -80,7 +80,7 @@ const Header = () => {
           target="_blank"
           className={`hoverable ${scrolling ? "scrolling" : ""}`}
         >
-          <FadeInWrapper delay={5400}>
+          <FadeInWrapper delay={5600}>
             <img
               src={externalLinkImage.currentImage}
               alt="External Link"
