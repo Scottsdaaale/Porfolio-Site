@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { setVisitedRoot } from "../redux/visitedSlice";
+import { Container, Row, Col } from "react-bootstrap";
 import "../Sandbox.css";
 import Buttons from "./Sandbox/Buttons";
 import SandboxPopup from "./SandboxPopup";
@@ -12,12 +13,12 @@ import Translator from "./Sandbox/Widgets/Translator/Translator";
 import WriteOutText from "./Sandbox/Widgets/WriteOutText";
 import ColorWriteOutText from "./Sandbox/Widgets/ColorWriteOutText";
 import RandomQuotes from "./Sandbox/Widgets/RandomQuotes/RandomQuotes";
-import { Container, Row, Col } from "react-bootstrap";
+
+
 import useDocumentTitle from "./useDocumentTitle";
 
 function Sandbox() {
-
-  useDocumentTitle('Sandbox');
+  useDocumentTitle("Sandbox");
 
   const dispatch = useDispatch();
 
@@ -61,10 +62,15 @@ function Sandbox() {
             <ColorWriteOutText />
           </Col>
         </Row>
-        <Row></Row>
+        <Row>
+          <Col>
+          </Col>
+        </Row>
       </Row>
     </Container>
   );
 }
 
 export default Sandbox;
+
+
