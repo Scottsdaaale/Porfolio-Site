@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Intro from "./Developer/Intro";
 import About from "./Developer/About";
 import Experience from "./Developer/Experience";
@@ -10,6 +10,10 @@ import useDocumentTitle from "./useDocumentTitle";
 
 function Main() {
   useDocumentTitle("Portfolio");
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <Container>
       <Intro />
