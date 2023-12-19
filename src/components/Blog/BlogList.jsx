@@ -2,28 +2,17 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
-import { setPosts } from "../../redux/blogSlice";
 import { setVisitedRoot } from "../../redux/visitedSlice";
-import postsData from "./posts";
+import posts from "./posts";
 import useDocumentTitle from "../Tools/useDocumentTitle";
+import useScrollAndDispatch from "../Tools/useScrollAndDispatch";
 
 const BlogList = () => {
   const dispatch = useDispatch();
-  const posts = useSelector((state) => state.blog.posts);
+
   useDocumentTitle("Blog");
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
-  useEffect(() => {
-    dispatch(setVisitedRoot(true));
-  }, [dispatch]);
-
-  useEffect(() => {
-    // Simulate fetching blog posts from the imported data
-    dispatch(setPosts(postsData));
-  }, [dispatch]);
+  useScrollAndDispatch(dispatch, setVisitedRoot(true));
 
   return (
     <Container>
