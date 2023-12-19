@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Container, Row, Col } from "react-bootstrap";
 import { setVisitedRoot } from "../../redux/visitedSlice";
 import { useParams } from "react-router-dom";
 
@@ -24,12 +25,12 @@ const BlogPost = () => {
   }
 
   return (
-    <div>
-      <img src={post.image} alt={post.title} />
+    <Container>
+      <img src={post.image} alt={post.title} width="40" height="40"/>
       <h2>{post.title}</h2>
 
       <p>{post.content}</p>
-    </div>
+    </Container>
   );
 };
 

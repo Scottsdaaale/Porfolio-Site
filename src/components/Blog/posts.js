@@ -11,8 +11,10 @@ const posts = [
     
     {
       id: 2,
-      title: '',
+      title: 'Taking my first big...',
       image: computer,
+      excerpt: "It was a sunday...",
+      content: 'if i was the biggest boyerntuse id be gay'
     }
   ];
 
