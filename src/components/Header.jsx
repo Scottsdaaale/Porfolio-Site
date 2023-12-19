@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import useImageToggle from "./useImageToggle";
 import computerPng from "../images/Computer2.png";
 import computerGif from "../images/Computer.gif";
+// import blogPng from "../images/Blog.png";
+// import blogGif from "../images/Blog.gif";
 import externalLinkPng from "../images/ExternalLink.png";
 import externalLinkGif from "../images/ExternalLink.gif";
 import toolPng from "../images/Tool.png";
@@ -33,6 +35,7 @@ const Header = () => {
 
   const computerImage = useImageToggle(computerPng, computerGif);
   const toolImage = useImageToggle(toolPng, toolGif);
+  // const blogImage = useImageToggle(blogPng, blogGif);
   const externalLinkImage = useImageToggle(externalLinkPng, externalLinkGif);
 
   return (
@@ -46,7 +49,7 @@ const Header = () => {
           <FadeInWrapper delay={5000}>
             <img
               src={computerImage.currentImage}
-              alt="Computer"
+              alt="Porfolio Page"
               width="40"
               height="40"
               className="hoverable-image"
@@ -64,13 +67,31 @@ const Header = () => {
           <FadeInWrapper delay={5300}>
             <img
               src={toolImage.currentImage}
-              alt="Sandbox page"
+              alt="Sandbox Page"
               width="40"
               height="40"
               className="hoverable-image"
               style={{ marginRight: "10px" }}
               onMouseEnter={toolImage.handleMouseEnter}
               onMouseLeave={toolImage.handleMouseLeave}
+            />
+          </FadeInWrapper>
+        </Navbar.Brand>
+        <Navbar.Brand
+          as={Link}
+          to="/blog"
+          className={`hoverable ${scrolling ? "scrolling" : ""}`}
+        >
+          <FadeInWrapper delay={5000}>
+            <img
+              src={computerImage.currentImage}
+              alt="Blog Page"
+              width="40"
+              height="40"
+              className="hoverable-image"
+              style={{ marginRight: "10px" }}
+              onMouseEnter={computerImage.handleMouseEnter}
+              onMouseLeave={computerImage.handleMouseLeave}
             />
           </FadeInWrapper>
         </Navbar.Brand>
@@ -83,7 +104,7 @@ const Header = () => {
           <FadeInWrapper delay={5600}>
             <img
               src={externalLinkImage.currentImage}
-              alt="External Link"
+              alt="Link Tree"
               width="40"
               height="40"
               className="hoverable-image"
@@ -93,6 +114,7 @@ const Header = () => {
             />
           </FadeInWrapper>
         </Navbar.Brand>
+        
       </Nav>
     </Navbar>
   );
