@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import logoImage from "../../images/Me.gif";
-import FadeInWrapper from "../FadeInWrapper";
+import FadeInWrapper from "../FadeInWrapper.jsx";
 
 function Intro() {
 
