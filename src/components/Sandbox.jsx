@@ -14,7 +14,6 @@ import WriteOutText from "./Sandbox/Widgets/WriteOutText";
 import ColorWriteOutText from "./Sandbox/Widgets/ColorWriteOutText";
 import RandomQuotes from "./Sandbox/Widgets/RandomQuotes/RandomQuotes";
 
-
 import useDocumentTitle from "./useDocumentTitle";
 
 function Sandbox() {
@@ -54,19 +53,17 @@ function Sandbox() {
         <Col className="mb-4">
           <Clock />
         </Col>
-        </Row>
-        <Row>
-          <Col className="mb-4">
-            <WriteOutText />
-          </Col>
-          <Col className="mb-4">
-            <ColorWriteOutText />
-          </Col>
-        </Row>
+      </Row>
+      <Row>
+        <Col className="mb-4">
+          <WriteOutText />
+        </Col>
+        <Col className="mb-4">
+          <ColorWriteOutText />
+        </Col>
+      </Row>
     </Container>
   );
 }
 
 export default Sandbox;
-
-
