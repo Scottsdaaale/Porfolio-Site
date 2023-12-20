@@ -54,6 +54,7 @@ function Sandbox() {
         <Col className="mb-4">
           <Clock />
         </Col>
+        </Row>
         <Row>
           <Col className="mb-4">
             <WriteOutText />
@@ -62,11 +63,6 @@ function Sandbox() {
             <ColorWriteOutText />
           </Col>
         </Row>
-        <Row>
-          <Col>
-          </Col>
-        </Row>
-      </Row>
     </Container>
   );
 }
