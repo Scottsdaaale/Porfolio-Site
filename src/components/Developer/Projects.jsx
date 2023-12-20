@@ -63,7 +63,7 @@ function Projects() {
   ];
 
   return (
-    <Container style={{ maxWidth: "500px", marginBottom: "40px" }}>
+    <Container style={{ marginBottom: "40px" }}>
       <h2 style={{ marginBottom: "30px" }}>Projects</h2>
       {projectInfo.map((info, index) => (
         <Project
