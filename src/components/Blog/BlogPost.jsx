@@ -4,32 +4,36 @@ import { Container } from "react-bootstrap";
 import { setVisitedRoot } from "../../redux/visitedSlice";
 import { useParams } from "react-router-dom";
 import useScrollAndDispatch from '../Tools/useScrollAndDispatch';
-import posts from "./posts";
+import posts from "./posts"; // Make sure the import path for 'posts' is correct
+import { toKebabCase } from "../Tools/toKebabCase";
 
 const BlogPost = () => {
   const dispatch = useDispatch();
-  const { id } = useParams();
-  console.log(id);
-
   useScrollAndDispatch(dispatch, setVisitedRoot(true));
 
-  // Find the post with the matching ID
-  const post = posts.find((post) => post.id === id);
+  const { id } = useParams();
+  const kebabCaseId = toKebabCase(id);
+  let post = posts.find((post) => toKebabCase(post.id) === kebabCaseId);
 
   if (!post) {
     return <div>Post not found!</div>;
   }
 
-  // Function to render content using dangerouslySetInnerHTML
   const renderHTMLContent = () => {
     return { __html: post.content };
   };
 
   return (
-    <Container>
-      <img src={post.image} alt={post.title} width="70" height="70" />
-      <h2>{post.title}</h2>
-      <div dangerouslySetInnerHTML={renderHTMLContent()} />
+    <Container style={{ maxWidth: "700px" }}>
+      <img src={post.image} alt={post.title} style={{ width: "70px", height: "70px" }} />
+      <h1 style={{ paddingTop: "20px", textAlign: "center" }}>{post.title}</h1>
+      <div
+        style={{
+          wordWrap: "break-word",
+          overflowWrap: "break-word",
+        }}
+        dangerouslySetInnerHTML={renderHTMLContent()}
+      />
     </Container>
   );
 };
