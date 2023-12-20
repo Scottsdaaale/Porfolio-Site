@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+      <style>
+         body {
+         margin: 0 auto; /* Optional: Center the content horizontally */
+         }
+         /* Flexbox styles */
+         .flex-container {
+         display: flex;
+         display: flex;
+         align-items: center;
+         }
+         .flex-item {
+         padding: 0;
+         margin: 0; 
+         width: 50%;
+         }
+         .flex-text {
+         }
+      </style>
+   <body>
+      <div class="flex-text" style="margin: 1px; flex: 1;">
+         <p>
+            Hello reader! Today I will be showing you how to create a star rating
+            system using ReactJS. By the end of this tutorial, you will have a state
+            with a value of a number for which star you clicked.
+         </p>
+      </div>
+      <hr style="border: 1px solid #ccc" />
+      <div class="flex-container">
+         <div class="flex-text" style="margin: 1px; flex: 1;">
+            <p>
+               First, make a StarRating component, import, and render it in App. Then,
+               we are going to do an install of <code>react-icons</code> so we can get
+               the star. We can do that by opening the terminal in the correct
+               directory and typing:
+            </p>
+            <code>npm install react-icons</code>
+            <p>OR</p>
+            <code>yarn add react-icons</code>
+         </div>
+      </div>
+      <hr style="border: 1px solid #ccc" />
+      <div class="flex-container">
+         <div style="padding: 10px; flex: 1;">
+            <p>Then we will import the star by typing</p>
+            <code>import { FaStar } from "react-icons/fa"</code>
+            <p>in StarRating.</p>
+         </div>
+      </div>
+      <hr style="border: 1px solid #ccc" />
+      <div class="flex-container">
+         <div style="padding: 10px; flex: 1;">
+            <p>
+               After this, we are going to write this nifty little array map that will
+               give us our 5 stars plus an index so we can give each star a value.
+               Inside the map, we are going to return our label, a radio type input,
+               and the FaStar component.
+            </p>
+         </div>
+         <div class="flex-item">
+            <img
+               src="${starRating1}"
+               alt="code photo 1"
+               style="width: 100%;"
+               />
+         </div>
+      </div>
+      <hr style="border: 1px solid #ccc" />
+      <div class="flex-container">
+         <div style="padding: 10px; flex: 1;">
+            <p>
+               Before we do anything else, let’s hide the radio buttons. In our CSS
+               file, we can write this to do just that.
+            </p>
+         </div>
+         <div class="flex-item">
+            <img
+               src="${starRating2}"
+               alt="code photo 2"
+               style="width: 100%;"
+               />
+         </div>
+      </div>
+      <hr style="border: 1px solid #ccc" />
+      <div class="flex-container">
+         <div class="flex-text" style="margin: 1px; flex: 1;">
+            <p>Now we are going to add an index value for each star. We are also going to add one to each index so that they don’t start with zero. Then we will add this ratingValue to the value of the input.</p>
+         </div>
+         <div class="flex-item">
+            <img
+               src="${starRating3}"
+               alt="code photo 3"
+               style="width: 100%;"
+               />
+         </div>
+      </div>
+      <hr style="border: 1px solid #ccc" />
+      <div class="flex-container">
+         <div class="flex-text" style="margin: 1px; flex: 1;">
+            <p>Now we want to save the value of the input in state, so that we can persist it.
+               So we need to import useState, make a new state and set it to null, then make an onClick in the input that will save the ratingValue to state every time you click on a star.
+            </p>
+         </div>
+         <div class="flex-item">
+            <img
+               src="${starRating4}"
+               alt="code photo 4"
+               style="width: 100%;"
+               />
+         </div>
+      </div>
+      <hr style="border: 1px solid #ccc" />
+      <div class="flex-container">
+         <div style="padding: 10px; flex: 1;">
+            <p>
+               Congrats! You have a functioning star rating! Now let’s make it a little
+               bit prettier. With just a small ternary, we can make it so when we click
+               on a star, it will light up and all the stars before it. React-icons can
+               take in a color prop. So we can add that under <code>FaStar</code>. Then
+               we will start our ternary. This code will take in the star we clicked’s
+               index, and anything less than or equal to it will be gold, all other
+               indices will be grey.
+            </p>
+         </div>
+         <div class="flex-item">
+            <img
+               src="${starRating5}"
+               alt="code photo 5"
+               style="width: 100%;"
+               />
+         </div>
+      </div>
+      <hr style="border: 1px solid #ccc" />
+      <div style="padding: 10px">
+         <p>
+            There you have it! A star rating component that will give you the value
+            of the star clicked and save it to state to do with as you please. In a
+            recent project, I used this to get an average rating and display it
+            under videos. I hope this is helpful to someone!
+         </p>
+      </div>
+   </body>
+</html>
