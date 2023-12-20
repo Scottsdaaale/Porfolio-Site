@@ -23,7 +23,7 @@ function Main() {
   //   dispatch(setVisitedRoot(false));
   // }, [dispatch]);
   return (
-    <Container>
+    <Container style={{maxWidth: "500px"}} >
       <Intro />
       <FadeInWrapper delay={5000}>
         <About />
