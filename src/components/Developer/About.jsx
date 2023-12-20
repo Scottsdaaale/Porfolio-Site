@@ -9,7 +9,7 @@ function About() {
   const plantImage = useImageToggle(plantPng, plantGif);
 
   return (
-    <Container style={{ maxWidth: "500px", marginBottom: "30px" }}>
+    <Container style={{ marginBottom: "30px" }}>
       <Row className="d-flex align-items-center">
         <Col xs={9} md={7} lg={9}>
           <h2 style={{ marginBottom: "20px" }}>About</h2>

@@ -7,7 +7,7 @@ function Intro() {
 
   return (
     <Container
-      style={{ maxWidth: "500px", marginTop: "", marginBottom: "50px" }}
+      style={{ marginTop: "", marginBottom: "50px" }}
     >
       <Row className="align-items-center justify-content-center">
         <Col xs={4} md={3} lg={3}>
