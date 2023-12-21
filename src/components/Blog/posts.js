@@ -379,7 +379,7 @@ const posts = [
     id: 'My Experience Programming with ADHD',
     title: 'My Experience Programming with ADHD',
     image: computer,
-    content: ``,
+    content: `<h1>Coming Soon!</h1>`,
   },
 
 ];
