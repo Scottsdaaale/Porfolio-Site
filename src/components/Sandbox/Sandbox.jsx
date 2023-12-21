@@ -31,7 +31,7 @@ function Sandbox() {
   }, [dispatch]);
 
   return (
-    <Container>
+    <Container style={{ maxWidth: "500px" }}>
       <SandboxPopup />
       <Row>
         <Col className="mb-4">
