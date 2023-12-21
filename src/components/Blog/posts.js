@@ -1,16 +1,233 @@
-import computer from "../../images/Computer.gif";
-import starRating1 from "./Blog-Images/star-rating-1.png";
-import starRating2 from "./Blog-Images/star-rating-2.png";
-import starRating3 from "./Blog-Images/star-rating-3.png";
-import starRating4 from "./Blog-Images/star-rating-4.png";
-import starRating5 from "./Blog-Images/star-rating-5.png";
+import computer from '../../images/Computer.gif';
+import starRating1 from './Blog-Images/Star-Rating/star-rating-1.png';
+import starRating2 from './Blog-Images/Star-Rating/star-rating-2.png';
+import starRating3 from './Blog-Images/Star-Rating/star-rating-3.png';
+import starRating4 from './Blog-Images/Star-Rating/star-rating-4.png';
+import starRating5 from './Blog-Images/Star-Rating/star-rating-5.png';
+import starGif from './Blog-Images/Star-Rating/Star.gif';
+import extentionGif from './Blog-Images/VScode-Extentions/Extention.gif';
+
+
+
 
 const posts = [
   {
-    id: "How To Make a Star Rating With React",
-    title: "How To Make a Star Rating With React",
-    image: computer,
-    excerpt: "Learn how to make a star rating...",
+    id: 'Supercharge Your Coding in VSCode with These Handy Extensions!',
+    title: `Supercharge Your Coding in VSCode with These Handy Extensions!`,
+    image: extentionGif,
+    content: `
+    <style>
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      li {
+        margin-bottom: 20px;
+      }
+
+      a {
+        color: #007bff;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <p>
+      Hey folks, diving into Visual Studio Code? I've rounded up a bunch of cool
+      extensions that have seriously improved my coding experience. Check these
+      out:
+    </p>
+
+    <ul>
+      <li>
+        <strong
+          ><a
+            href="https://marketplace.visualstudio.com/items?itemName=naumovs.color-highlight"
+            >Color Highlight</a
+          ></strong
+        > <br />
+        Displays the actual color for hex codes or other color formats.
+      </li>
+      <li>
+        <strong
+          ><a
+            href="https://marketplace.visualstudio.com/items?itemName=WallabyJs.console-ninja"
+            >Console Ninja</a
+          ></strong
+        > <br />
+        Shows errors, logs, etc., right in VSCode. Helpful for identifying
+        errors in code.
+      </li>
+      <li>
+        <strong
+          ><a
+            href="https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets"
+            >ES7+ React/Redux/React-Native snippets</a
+          ></strong
+        > <br />
+        Helpful shortcuts for React snippets. I use "rfce" a lot, which just
+        builds a functional component skeleton.
+      </li>
+      <li>
+        <strong
+          ><a
+            href="https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint"
+            >ESLint</a
+          ></strong
+        > <br />
+        Helps find and fix problems in JavaScript code.
+      </li>
+      <li>
+        <strong
+          ><a
+            href="https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow"
+            >Indent-Rainbow</a
+          ></strong
+        > <br />
+        Looks cool but also good for visual separation.
+      </li>
+      <li>
+        <strong
+          ><a
+            href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server"
+            >Live Preview</a
+          ></strong
+        > <br />
+        Nice little extension if you are working in HTML. Hosts a local server
+        to view your HTML right inside of VSCode. Also updates in real time, so
+        no refreshing.
+      </li>
+      <li>
+        <strong
+          ><a
+            href="https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare"
+            >Live Share</a
+          ></strong
+        > <br />
+        Brilliant plugin that allows you and your team to make live changes in
+        the same VSCode project.
+      </li>
+      <li>
+        <strong
+          ><a
+            href="https://marketplace.visualstudio.com/items?itemName=Tyriar.lorem-ipsum"
+            >Lorem Ipsum</a
+          ></strong
+        > <br />
+        Simple lorem ipsum generator. Press F1 and "lorem ipsum" and select to
+        insert either a line or paragraph.
+      </li>
+      <li>
+        <strong
+          ><a
+            href="https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme"
+            >Material Icon Theme</a
+          ></strong
+        > <br />
+        Hundreds of icons for files/folders.
+      </li>
+      <li>
+        <strong
+          ><a
+            href="https://marketplace.visualstudio.com/items?itemName=dcasella.monokai-plusplus"
+            >Monokai++</a
+          ></strong
+        > <br />
+        Probably my favorite theme that I've used. I just personally like it,
+        maybe give it a shot?
+      </li>
+      <li>
+        <strong
+          ><a
+            href="https://marketplace.visualstudio.com/items?itemName=christian-kohler.npm-intellisense"
+            >npm Intellisense</a
+          ></strong
+        > <br />
+        Autocompletes npm modules in import statements.
+      </li>
+      <li>
+        <strong
+          ><a
+            href="https://marketplace.visualstudio.com/items?itemName=Postman.postman-for-vscode"
+            >Postman</a
+          ></strong
+        > <br />
+        Same ol postman, but now in VSCode. Pretty nice to not need to switch
+        between VSCode and Postman windows.
+      </li>
+      <li>
+        <strong
+          ><a
+            href="https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode"
+            >Prettier - Code formatter</a
+          ></strong
+        > <br />
+        Everybody knows this one right? A little tip though, you can configure
+        some settings like only use single quotes, and semicolons by going to
+        VSCode preferences &gt; settings &gt; extensions &gt; prettier.
+      </li>
+      <li>
+        <strong
+          ><a
+            href="https://marketplace.visualstudio.com/items?itemName=jakob101.RelativePath"
+            >Relative Path</a
+          ></strong
+        > <br />
+        THIS IS ONE OF MY FAVORITE PLUGINS. I'm ALWAYS MESSING UP MY PATHS. This
+        will get you the relative path to any file in your workspace. THANK YOU
+        DEVS
+      </li>
+      <li>
+        <strong
+          ><a
+            href="https://marketplace.visualstudio.com/items?itemName=SimonSiefke.svg-preview"
+            >SVG Preview</a
+          ></strong
+        > <br />
+        Allows you to preview an SVG file.
+      </li>
+      <li>
+        <strong
+          ><a
+            href="https://marketplace.visualstudio.com/items?itemName=TabNine.tabnine-vscode"
+            >Tabnine</a
+          ></strong
+        > <br />
+        Tabnine is a nifty tool that uses AI to autocomplete your code.
+        Sometimes it's right, sometimes it's wrong. But it can be pretty
+        helpful. Every developer should probably have this.
+      </li>
+      <li>
+        <strong
+          ><a
+            href="https://marketplace.visualstudio.com/items?itemName=tomoki1207.pdf"
+            >VSCode-pdf</a
+          ></strong
+        > <br />
+        Shows preview of PDF.
+      </li>
+    </ul>
+
+    <p>
+      Feel free to explore these extensions to enhance your VSCode experience!
+      These have been incredibly useful in my development workflow.
+    </p>
+
+    <p>Happy Coding! 🚀✨</p>
+  </body>
+    `,
+  },
+  {
+    id: 'How To Make a Star Rating With React',
+    title: 'How To Make a Star Rating With React',
+    image: starGif,
     content: `
     <style>
     body {
@@ -28,8 +245,8 @@ const posts = [
     width: 50%;
     }
     p {
-      margin-top: 1;
-      margin-bottom: 1;
+      margin-top: 5px;
+      margin-bottom: 5px;
     }
     
  </style>
@@ -158,15 +375,13 @@ const posts = [
     
     `,
   },
-  {
-    id: "How To Make a Star Rating With React",
-    title: "How To Make a Star Rating With React",
+    {
+    id: 'My Experience Programming with ADHD',
+    title: 'My Experience Programming with ADHD',
     image: computer,
-    excerpt: "I wish I was capping about this...",
-    content: `
-    
-    `
-  }
+    content: ``,
+  },
+
 ];
 
 export default posts;
