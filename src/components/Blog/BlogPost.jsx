@@ -7,6 +7,7 @@ import useScrollAndDispatch from '../Tools/useScrollAndDispatch';
 import posts from "./posts"; // Make sure the import path for 'posts' is correct
 import { toKebabCase } from "../Tools/toKebabCase";
 
+
 const BlogPost = () => {
   const dispatch = useDispatch();
   useScrollAndDispatch(dispatch, setVisitedRoot(true));
@@ -24,14 +25,10 @@ const BlogPost = () => {
   };
 
   return (
-    <Container style={{ maxWidth: "700px" }}>
+    <Container style={{ maxWidth: "500px" }}>
       <img src={post.image} alt={post.title} style={{ width: "70px", height: "70px" }} />
-      <h1 style={{ paddingTop: "20px", textAlign: "center" }}>{post.title}</h1>
+      <h1 style={{ paddingTop: "20px", paddingBottom: "20px"}}>{post.title}</h1>
       <div
-        style={{
-          wordWrap: "break-word",
-          overflowWrap: "break-word",
-        }}
         dangerouslySetInnerHTML={renderHTMLContent()}
       />
     </Container>
