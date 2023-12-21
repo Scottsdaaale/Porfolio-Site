@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import useImageToggle from "./useImageToggle";
 import computerPng from "../images/Computer2.png";
 import computerGif from "../images/Computer.gif";
+import bookPng from "../images/Book.png";
+import bookGif from "../images/Book.gif";
 // import blogPng from "../images/Blog.png";
 // import blogGif from "../images/Blog.gif";
 import externalLinkPng from "../images/ExternalLink.png";
@@ -35,7 +37,7 @@ const Header = () => {
 
   const computerImage = useImageToggle(computerPng, computerGif);
   const toolImage = useImageToggle(toolPng, toolGif);
-  // const blogImage = useImageToggle(blogPng, blogGif);
+  const bookImage = useImageToggle(bookPng, bookGif);
   const externalLinkImage = useImageToggle(externalLinkPng, externalLinkGif);
 
   return (
@@ -82,16 +84,16 @@ const Header = () => {
           to="/blog"
           className={`hoverable ${scrolling ? "scrolling" : ""}`}
         >
-          <FadeInWrapper delay={5000}>
+          <FadeInWrapper delay={5600}>
             <img
-              src={computerImage.currentImage}
+              src={bookImage.currentImage}
               alt="Blog Page"
               width="40"
               height="40"
               className="hoverable-image"
               style={{ marginRight: "10px" }}
-              onMouseEnter={computerImage.handleMouseEnter}
-              onMouseLeave={computerImage.handleMouseLeave}
+              onMouseEnter={bookImage.handleMouseEnter}
+              onMouseLeave={bookImage.handleMouseLeave}
             />
           </FadeInWrapper>
         </Navbar.Brand>
@@ -101,7 +103,7 @@ const Header = () => {
           target="_blank"
           className={`hoverable ${scrolling ? "scrolling" : ""}`}
         >
-          <FadeInWrapper delay={5600}>
+          <FadeInWrapper delay={5900}>
             <img
               src={externalLinkImage.currentImage}
               alt="Link Tree"
