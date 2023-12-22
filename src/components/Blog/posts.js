@@ -4,17 +4,16 @@ import starRating2 from './Blog-Images/Star-Rating/star-rating-2.png';
 import starRating3 from './Blog-Images/Star-Rating/star-rating-3.png';
 import starRating4 from './Blog-Images/Star-Rating/star-rating-4.png';
 import starRating5 from './Blog-Images/Star-Rating/star-rating-5.png';
-import starGif from './Blog-Images/Star-Rating/Star.gif';
-import extentionGif from './Blog-Images/VScode-Extentions/Extention.gif';
-
-
-
+import star from './Blog-Images/Star-Rating/Star.gif';
+import extention from './Blog-Images/VScode-Extentions/Extention.gif';
+import brain from './Blog-Images/ADHD/Brain.gif';
+import woolie from '../../images/Woolie.gif';
 
 const posts = [
   {
-    id: 'Supercharge Your Coding in VSCode with These Handy Extensions!',
+    id: 'Supercharge Your Coding in VSCode with These Handy Extensions',
     title: `Supercharge Your Coding in VSCode with These Handy Extensions!`,
-    image: extentionGif,
+    image: extention,
     content: `
     <style>
       ul {
@@ -227,7 +226,7 @@ const posts = [
   {
     id: 'How To Make a Star Rating With React',
     title: 'How To Make a Star Rating With React',
-    image: starGif,
+    image: star,
     content: `
     <style>
     body {
@@ -375,13 +374,113 @@ const posts = [
     
     `,
   },
-    {
+  {
     id: 'My Experience Programming with ADHD',
     title: 'My Experience Programming with ADHD',
-    image: computer,
-    content: ``,
-  },
+    image: brain,
+    content: `
+    <p>
+      At the time of writing this, I've been studying web development for almost 3 years. 
+      There is a lot to learn when it comes to this career path, and it's been quite the battle just to keep 
+      myself learning as much as possible.
+    </p>
+    <p>
+      I struggled for a long time with what I wanted 
+      to do as a career, and I tried many different things. I think a big reason for that is because when I don't
+      like something it's very hard for me to keep focused on it, or really, to even want to do it at all. But
+      I think I found something in programming that I didn't expect when I began studying. 
+    </p>
+    <p>
+      I actually really enjoy it. 
+      <br> 
+      <br> 
+      And if I'm honest, I don't really think I thought I would when I started.
+    </p>
+    <p>
+      If you told me 5 years ago that I would be doing this right now, I wouldn't have believed it. I 
+      wouldn't have thought I was that type of guy because programming is for smart people, and I am dumb.
+    </p>
+    <p>
+      Well I've been learning a lot about myself through this coding journey, and it turns out I'm actually 
+      NOT dumb! I just need to be ENGAGED.
+    </p>
+    <p>
+      This journey has reshaped my understanding of my capabilities and strengths. It's not about innate intelligence but 
+      rather about finding genuine interest and engagement in what I do.
+    </p>
+    <p>
+      I still struggle with losing focus constantly. Especially when I'm faced with an issue that I'm having trouble getting around. 
+      But I am able to hyper focus more often and end up grinding on projects for hours.
+    </p>
+    <p>
+      I've been lucky enough to land some freelance gigs doing this work. It's been very rewarding! I don't struggle
+      with hating work like I have at other jobs. Because of that I am able to focus and have tons of motivation.   
+    </p>
+    <p>
+      To wrap this up, here a few things I would recommend to people with ADHD who want to get into programming:
+    </p>
 
+    <ul>
+      <li>
+        Get good sleep 
+        <ul>
+          <li>
+            There are tons of sleep tracking apps too that can track sleeping habits and help you correct them
+          </li>
+        </ul>
+      </li>
+
+      <br>
+
+      <li>
+        Follow a routine
+        <br>
+        <ul>
+          <li>
+            I recommend using a to-do list app. There are many out there, but I've been using <a href="https://www.microsoft.com/store/productId/9NBLGGH5R558?ocid=pdpshare">Microsoft To Do</a>
+            because it works on Apple devices and Windows. Everyday I write out what I need to do. Doing something as simple as that really helps me hone in on what 
+            I need to get done that day.
+          </li>  
+        </ul>
+      </li>
+
+      <br>
+
+      <li>
+        Use timers
+        <br>
+        <ul>
+          <li>
+            Timers are great for time management! I can figure out how much time I want to deticate to that particular task
+            and set a timer for it. I've got a Stream Deck, which allows you to setup timers with the touch of a button.
+          </li>
+        </ul>
+      </li>
+
+      <br>
+
+      <li>
+        Take breaks when you feel overwhelmed
+        <br>
+        <ul>
+          <li>
+            It's easy to get frustrated by a problem. Taking a short break is a good way to help yourself relax for a second
+            and get a clear head. A lot of the time I'll come back and find a fix pretty soon after.
+          </li>
+        </ul>
+      </li>
+      
+      <br>
+    </ul>
+      <p>Thanks for reading!</p>
+    `,
+  },
+  {
+    id: 'Woolie.tv',
+    title: 'Building Woolie.tv',
+    image: woolie,
+    content: `<h3>Coming soon...</h3>`,
+  },
 ];
 
 export default posts;
