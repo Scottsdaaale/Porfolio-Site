@@ -81,7 +81,7 @@ const ColorWriteOutText = () => {
   };
 
   return (
-    <div style={{height: "1100px", background: "#2b2b2b", borderRadius: "5px"}}>
+    <div style={{height: "100%", background: "#2b2b2b", borderRadius: "5px"}}>
       <button onClick={resetTyping}>Restart Typing</button>
       <pre>
         {currentText.split("").map((letter, index) => (
