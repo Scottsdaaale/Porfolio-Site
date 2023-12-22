@@ -25,19 +25,21 @@ const BlogList = () => {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
+    // justifyContent: 'space-between',
     height: '200px',
     maxHeight: '200px',
     padding: '20px',
   };
 
   const imageStyle = {
-    width: '50px',
-    height: '50px',
+    width: '60px',
+    height: '60px',
     alignSelf: 'center', // Align the image within the flex container
   };
 
   const titleStyle = {
     paddingTop: '10px',
+    textAlign: 'center',
     overflow: 'hidden',
     display: '-webkit-box',
     WebkitBoxOrient: 'vertical',
