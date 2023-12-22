@@ -15,7 +15,7 @@ function About() {
           <h2 style={{ marginBottom: '20px' }}>About</h2>
           <Container>
             <p>
-              Creative web developer with 2 years of experience. Effective
+              Creative web developer with 3 years of experience. Effective
               communicator and adept problem-solver. Spearheaded a startup from
               inception. Proficient in crafting innovative, user-friendly
               websites. Enthusiastic about designing visually captivating
