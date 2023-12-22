@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, Row } from "react-bootstrap";
-import Projects from "./Music/Projects"
+import Projects from "./Projects"
 
 
 

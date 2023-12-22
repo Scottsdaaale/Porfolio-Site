@@ -1,20 +1,21 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { setVisitedRoot } from "../redux/visitedSlice";
+import { setVisitedRoot } from "../../redux/visitedSlice";
 import { Container, Row, Col } from "react-bootstrap";
-import "../Sandbox.css";
-import Buttons from "./Sandbox/Buttons";
+import "./Sandbox.css";
+import Buttons from "./Buttons";
 import SandboxPopup from "./SandboxPopup";
-import ProgressBar from "./Sandbox/Widgets/ProgressBar";
-import ColorChange from "./Sandbox/Widgets/ColorChange";
-import Popup from "./Sandbox/Widgets/Popup";
-import Clock from "./Sandbox/Widgets/Clock";
-import Translator from "./Sandbox/Widgets/Translator/Translator";
-import WriteOutText from "./Sandbox/Widgets/WriteOutText";
-import ColorWriteOutText from "./Sandbox/Widgets/ColorWriteOutText";
-import RandomQuotes from "./Sandbox/Widgets/RandomQuotes/RandomQuotes";
+import ProgressBar from "./Widgets/ProgressBar";
+import ColorChange from "./Widgets/ColorChange";
+import Popup from "./Widgets/Popup";
+import Clock from "./Widgets/Clock";
+import Translator from "./Widgets/Translator/Translator";
+import WriteOutText from "./Widgets/WriteOutText";
+import ColorWriteOutText from "./Widgets/ColorWriteOutText";
+import RandomQuotes from "./Widgets/RandomQuotes/RandomQuotes";
 
-import useDocumentTitle from "./useDocumentTitle";
+
+import useDocumentTitle from "../Tools/useDocumentTitle";
 
 function Sandbox() {
   useDocumentTitle("Sandbox");
@@ -30,7 +31,7 @@ function Sandbox() {
   }, [dispatch]);
 
   return (
-    <Container>
+    <Container style={{ maxWidth: "500px" }}>
       <SandboxPopup />
       <Row>
         <Col className="mb-4">

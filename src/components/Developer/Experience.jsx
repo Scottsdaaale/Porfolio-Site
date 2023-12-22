@@ -2,8 +2,8 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { Tooltip } from "react-tooltip";
 import useImageToggle from "../useImageToggle";
-import wooliePng from "../../images/Woolie.png"
-import woolieGif from "../../images/Woolie.gif"
+import wooliePng from "../../images/Woolie.png";
+import woolieGif from "../../images/Woolie.gif";
 import saturoPng from "../../images/Saturo.png";
 import saturoGif from "../../images/Saturo.gif";
 import liquidPng from "../../images/Liquid2.png";
@@ -22,7 +22,6 @@ function Job({
   link,
   tooltipContent,
 }) {
-
   const jobImage = useImageToggle(png, gif);
 
   return (
@@ -74,14 +73,12 @@ function Experience() {
       responsibilities: [
         "Pioneered the inception and development of a captivating relaxation platform from its conceptual stages to a fully realized, engaging experience.",
         "Drove engagement strategies leading to a substantial rise in platform adoption and retention rates through active cultivation and nurturing of the user base.",
-        "Iteratively enhanced platform functionality and interface based on user feedback and analytics, ensuring a seamless experience for our expanding user community."
-
+        "Iteratively enhanced platform functionality and interface based on user feedback and analytics, ensuring a seamless experience for our expanding user community.",
       ],
       png: wooliePng,
       gif: woolieGif,
       link: "https://www.woolie.tv",
       tooltipContent: "woolie.tv",
-
     },
     {
       company: "Saturo Sounds",
@@ -130,11 +127,9 @@ function Experience() {
     },
   ];
   return (
-    <Container style={{ maxWidth: "500px", marginBottom: "30px" }}>
+    <Container style={{ marginBottom: "30px" }}>
       <h2 style={{ marginBottom: "30px" }}>Experience</h2>
-
       <Tooltip id="my-tooltip" />
-
       {jobData.map((job, index) => (
         <Job
           key={index}

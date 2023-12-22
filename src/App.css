@@ -52,6 +52,15 @@ li {
   opacity: 0.5;
 }
 
+.hoverable-div {
+  transition: transform 0.3s ease-in-out;
+  
+}
+
+.hoverable-div:hover {
+  transform: scale(1.04);
+}
+
 .fade-in-container {
   opacity: 0;
   transition: opacity 1s ease-in-out;

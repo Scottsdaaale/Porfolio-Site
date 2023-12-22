@@ -1,12 +1,11 @@
 import React from "react";
-import "./App.css";
-import Main from "./components/Main";
-import Header from "./components/Header";
-import Music from "./components/Music";
-import Sandbox from "./components/Sandbox";
-import FadeInWrapper from "./components/FadeInWrapper";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Container from "react-bootstrap/Container";
+import "./App.css";
+import Header from "./components/Header";
+import Main from "./components/Developer/Main";
+import Sandbox from "./components/Sandbox/Sandbox";
+import BlogPost from "./components/Blog/BlogPost"; // Import BlogPostDetail component
+import BlogList from "./components/Blog/BlogList";
 
 function App() {
   return (
@@ -15,8 +14,9 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Main className="main" />} />
-          {/* <Route path="/music" element={<Music />} />  */}
           <Route path="/sandbox" element={<Sandbox />} />
+          <Route path="/blog" element={<BlogList />} />
+          <Route path="/posts/:id" element={<BlogPost />} />
         </Routes>
       </Router>
     </div>

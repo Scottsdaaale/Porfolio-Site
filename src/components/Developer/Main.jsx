@@ -1,21 +1,29 @@
 import React, { useEffect } from "react";
-import Intro from "./Developer/Intro";
-import About from "./Developer/About";
-import Experience from "./Developer/Experience";
-import Projects from "./Developer/Projects";
-import Contact from "./Developer/Contact";
+import { useDispatch } from "react-redux";
+import { setVisitedRoot } from "../../redux/visitedSlice";
+import Intro from "./Intro";
+import About from "./About";
+import Experience from "./Experience";
+import Projects from "./Projects";
+import Contact from "./Contact";
 import { Container } from "react-bootstrap";
-import FadeInWrapper from "./FadeInWrapper";
-import useDocumentTitle from "./useDocumentTitle";
+import FadeInWrapper from "../FadeInWrapper";
+import useDocumentTitle from "../Tools/useDocumentTitle";
 
 function Main() {
+  const dispatch = useDispatch();
+
   useDocumentTitle("Portfolio");
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  // useEffect(() => {
+  //   dispatch(setVisitedRoot(false));
+  // }, [dispatch]);
   return (
-    <Container>
+    <Container style={{maxWidth: "500px"}} >
       <Intro />
       <FadeInWrapper delay={5000}>
         <About />

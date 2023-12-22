@@ -41,7 +41,7 @@ function Contact() {
   const contactImage = useImageToggle(contactPng, contactGif);
 
   return (
-    <Container style={{ maxWidth: "500px", marginBottom: "30px" }}>
+    <Container style={{ marginBottom: "30px" }}>
       <h2 style={{ marginBottom: "20px" }}>Contact</h2>
       <Container>
         <Row className="d-flex align-items-center">
