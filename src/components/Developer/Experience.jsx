@@ -78,7 +78,7 @@ function Experience() {
       png: wooliePng,
       gif: woolieGif,
       link: "https://www.woolie.tv",
-      tooltipContent: "woolie.tv",
+      tooltipContent: "Woolie.tv",
     },
     {
       company: "Saturo Sounds",
