@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Navbar, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { Tooltip } from "react-tooltip"
 import useImageToggle from "./useImageToggle";
 import computerPng from "../images/Computer2.png";
 import computerGif from "../images/Computer.gif";
@@ -47,6 +48,8 @@ const Header = () => {
           as={Link}
           to="/"
           className={`hoverable ${scrolling ? "scrolling" : ""}`}
+          data-tooltip-id="my-tooltip"
+          data-tooltip-content='Portfolio'
         >
           <FadeInWrapper delay={5000}>
             <img
@@ -65,6 +68,8 @@ const Header = () => {
           as={Link}
           to="/sandbox"
           className={`hoverable ${scrolling ? "scrolling" : ""}`}
+          data-tooltip-id="my-tooltip"
+          data-tooltip-content='Sandbox'
         >
           <FadeInWrapper delay={5300}>
             <img
@@ -83,6 +88,8 @@ const Header = () => {
           as={Link}
           to="/blog"
           className={`hoverable ${scrolling ? "scrolling" : ""}`}
+          data-tooltip-id="my-tooltip"
+          data-tooltip-content='Blog'
         >
           <FadeInWrapper delay={5600}>
             <img
@@ -116,7 +123,7 @@ const Header = () => {
             />
           </FadeInWrapper>
         </Navbar.Brand>
-        
+        <Tooltip id="my-tooltip" />
       </Nav>
     </Navbar>
   );
