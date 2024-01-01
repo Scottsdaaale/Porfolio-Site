@@ -120,7 +120,7 @@ const posts = [
             >Lorem Ipsum</a
           ></strong
         > <br />
-        Simple lorem ipsum generator. Press F1 and "lorem ipsum" and select to
+        Simple lorem ipsum generator. Press F1, type "lorem ipsum" and select to
         insert either a line or paragraph.
       </li>
       <li>
