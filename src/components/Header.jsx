@@ -55,7 +55,7 @@ const Header = () => {
               width="40"
               height="40"
               className="hoverable-image"
-              style={{ marginRight: "10px" }}
+              // style={{ marginRight: "5px" }}
               onMouseEnter={computerImage.handleMouseEnter}
               onMouseLeave={computerImage.handleMouseLeave}
             />
@@ -73,7 +73,7 @@ const Header = () => {
               width="40"
               height="40"
               className="hoverable-image"
-              style={{ marginRight: "10px" }}
+              // style={{ marginRight: "5px" }}
               onMouseEnter={toolImage.handleMouseEnter}
               onMouseLeave={toolImage.handleMouseLeave}
             />
@@ -91,7 +91,7 @@ const Header = () => {
               width="40"
               height="40"
               className="hoverable-image"
-              style={{ marginRight: "10px" }}
+              // style={{ marginRight: "5px" }}
               onMouseEnter={bookImage.handleMouseEnter}
               onMouseLeave={bookImage.handleMouseLeave}
             />
@@ -110,7 +110,7 @@ const Header = () => {
               width="40"
               height="40"
               className="hoverable-image"
-              style={{ marginRight: "10px" }}
+              // style={{ marginRight: "10px" }}
               onMouseEnter={externalLinkImage.handleMouseEnter}
               onMouseLeave={externalLinkImage.handleMouseLeave}
             />
