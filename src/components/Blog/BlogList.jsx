@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Container } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import { useDispatch } from 'react-redux';
 import { setVisitedRoot } from '../../redux/visitedSlice';
 import posts from './posts';
@@ -12,75 +12,89 @@ const BlogList = () => {
   const dispatch = useDispatch();
 
   useDocumentTitle('Blog');
-
   useScrollAndDispatch(dispatch, setVisitedRoot(true));
-
-  const groupedPosts = [];
-
-  for (let i = 0; i < posts.length; i += 3) {
-    groupedPosts.push(posts.slice(i, i + 3));
-  }
 
   const divStyle = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    // justifyContent: 'space-between',
+    justifyContent: 'center',
     height: '200px',
-    maxHeight: '200px',
     padding: '20px',
+    margin: '5px',
+    background: '#2b2b2b',
+    borderRadius: '5px',
+  };
+
+  const imageContainerStyle = {
+    height: '80px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
   };
 
   const imageStyle = {
     width: '60px',
     height: '60px',
-    alignSelf: 'center', // Align the image within the flex container
+  };
+
+  const titleContainerStyle = {
+    textAlign: 'center',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    maxHeight: '100px',
+    flex: 1,
+  };
+
+  const linkStyle = {
+    textDecoration: 'none',
+    color: 'inherit',
   };
 
   const titleStyle = {
-    paddingTop: '10px',
-    textAlign: 'center',
+    margin: '0',
     overflow: 'hidden',
     display: '-webkit-box',
     WebkitBoxOrient: 'vertical',
     WebkitLineClamp: 4,
-    textOverflow: 'ellipsis',
-    wordWrap: 'break-word',
-    overflowWrap: 'break-word',
   };
 
   return (
     <Container style={{ maxWidth: '500px' }}>
-      <div
-        style={{
-          display: 'grid',
-          gridTemplateColumns: '1fr 1fr',
-          // margin: '10px',
-          gap: '50px',
-        }}
-      >
-        {groupedPosts.map((row, rowIndex) =>
-          row.map((post) => (
-            <Link
-              to={`/posts/${toKebabCase(post.id)}`}
-              className='hoverable-div'
-              style={{
-                textDecoration: 'none',
-                color: 'inherit',
-                width: '100%',
-                background: '#2b2b2b',
-                borderRadius: '5px',
-              }}
-              key={post.id}
-            >
-              <div style={divStyle}>
-                <img src={post.image} alt={post.title} style={imageStyle} />
-                <h2 style={titleStyle}>{post.title}</h2>
-              </div>
-            </Link>
-          ))
-        )}
-      </div>
+      {posts
+        .reduce((rows, post, idx) => {
+          if (idx % 2 === 0) rows.push([]);
+          rows[rows.length - 1].push(post);
+          return rows;
+        }, [])
+        .map((row, rowIndex) => (
+          <Row  key={rowIndex}>
+            {row.map((post) => (
+              <Col className='hoverable-div' key={post.id} sm>
+                <Link
+                  to={`/posts/${toKebabCase(post.id)}`}
+                  
+                  style={linkStyle}
+                >
+                  <div style={divStyle}>
+                    <div style={imageContainerStyle}>
+                      <img
+                        src={post.image}
+                        alt={post.title}
+                        style={imageStyle}
+                      />
+                    </div>
+                    <div style={titleContainerStyle}>
+                      <h2 style={titleStyle}>{post.title}</h2>
+                    </div>
+                  </div>
+                </Link>
+              </Col>
+            ))}
+          </Row>
+        ))}
     </Container>
   );
 };
