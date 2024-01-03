@@ -71,3 +71,5 @@ li {
 .fade-in {
   opacity: 1;
 }
+
+iframe#webpack-dev-server-client-overlay{display:none!important}
