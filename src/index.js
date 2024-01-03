@@ -6,10 +6,11 @@ import { Provider } from 'react-redux';
 import { HelmetProvider } from 'react-helmet-async';
 import store from './redux/store';
 import App from './App';
+const helmetContext = {};
 
 ReactDOM.render(
   <Provider store={store}>
-    <HelmetProvider>
+    <HelmetProvider context={helmetContext}>
       <App />
     </HelmetProvider>
   </Provider>,
