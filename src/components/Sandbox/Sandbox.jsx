@@ -31,7 +31,7 @@ function Sandbox() {
   }, [dispatch]);
 
   return (
-    <Container style={{ maxWidth: "500px" }}>
+    <Container style={{ maxWidth: "700px" }}>
       <SandboxPopup />
       <Row>
         <Col className="mb-4">
@@ -56,9 +56,9 @@ function Sandbox() {
         </Col>
       </Row>
       <Row>
-        <Col className="mb-4">
+        {/* <Col className="mb-4">
           <WriteOutText />
-        </Col>
+        </Col> */}
         <Col className="mb-4">
           <ColorWriteOutText />
         </Col>
