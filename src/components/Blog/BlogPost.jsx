@@ -4,7 +4,8 @@ import { Container } from "react-bootstrap";
 import { setVisitedRoot } from "../../redux/visitedSlice";
 import { useParams } from "react-router-dom";
 import useScrollAndDispatch from '../Tools/useScrollAndDispatch';
-import posts from "./posts"; // Make sure the import path for 'posts' is correct
+import posts from "./posts"; 
+import  Seo  from '../Tools/Seo.jsx'
 import { toKebabCase } from "../Tools/toKebabCase";
 
 
@@ -26,6 +27,14 @@ const BlogPost = () => {
 
   return (
     <Container style={{ maxWidth: "500px" }}>
+      <Seo
+      title={post.title}
+      description={post.descrition}
+      name={post.name}
+      type={post.type}
+      imageUrl={post.imageUrl}
+    
+      />
       <img src={post.image} alt={post.title} style={{ width: "70px", height: "70px" }} />
       <h1 style={{ paddingTop: "20px", paddingBottom: "20px"}}>{post.title}</h1>
       <div
