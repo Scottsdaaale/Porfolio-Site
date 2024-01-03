@@ -109,6 +109,8 @@ const Header = () => {
           href="https://linktr.ee/scottsdaaale"
           target="_blank"
           className={`hoverable ${scrolling ? "scrolling" : ""}`}
+          data-tooltip-id="my-tooltip"
+          data-tooltip-content='LinkTree'
         >
           <FadeInWrapper delay={5900}>
             <img
