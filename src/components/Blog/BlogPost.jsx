@@ -29,7 +29,7 @@ const BlogPost = () => {
     <Container style={{ maxWidth: "500px" }}>
       <Seo
       title={post.title}
-      description={post.descrition}
+      description={post.description}
       name={post.name}
       type={post.type}
       imageUrl={post.imageUrl}
