@@ -6,7 +6,7 @@ export default function SEO({ title, description, name, imageUrl }) {
     <Helmet>
       {/* Standard metadata tags */}
       <title>{title}</title>
-      <meta name='description' content={description} />
+      {/* <meta name='description' content={description} /> */}
       {/* End standard metadata tags */}
       {/* Facebook tags */}
       <meta property='og:type' content='artical' />
