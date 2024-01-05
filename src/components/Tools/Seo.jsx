@@ -23,3 +23,5 @@ export default function SEO({ title, description, name, imageUrl }) {
     </Helmet>
   );
 }
+
+

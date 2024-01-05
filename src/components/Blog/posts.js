@@ -15,7 +15,7 @@ const posts = [
     title: `Supercharge Your Coding in VSCode with These Handy Extensions!`,
     description: "Hey folks, diving into Visual Studio Code? I've rounded up a bunch of cool extensions that have seriously improved my coding experience",
     image: extention,
-    imageUrl: 'http://',
+    imageUrl: 'https://i.imgur.com/ZT3AuRV.png',
     content: `
     <style>
       ul {
@@ -230,7 +230,7 @@ const posts = [
     title: 'How To Make a Star Rating With React',
     description: "Hello reader! Today I will be showing you how to create a star rating system using ReactJS",
     image: star,
-    imageUrl: '',
+    imageUrl: 'https://i.imgur.com/ZT3AuRV.png',
     content: `
     <style>
     body {
@@ -486,7 +486,7 @@ const posts = [
     title: 'Building Woolie.tv',
     description: "Supercharge Your Coding in VSCode with These Handy",
     image: woolie,
-    imageUrl: 'http://',
+    imageUrl: 'https://i.imgur.com/ZT3AuRV.png',
     content: `<h3>Coming soon...</h3>`,
   },
 ];

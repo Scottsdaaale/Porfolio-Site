@@ -13,7 +13,7 @@ function App() {
       <Router>
         <Header />
         <Routes>
-          <Route path="/" element={<Main className="main" />} />
+          <Route path="/" element={<Main />} />
           <Route path="/sandbox" element={<Sandbox />} />
           <Route path="/blog" element={<BlogList />} />
           <Route path="/posts/:id" element={<BlogPost />} />
