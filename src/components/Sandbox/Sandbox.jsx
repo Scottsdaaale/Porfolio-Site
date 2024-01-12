@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { setVisitedRoot } from "../../redux/visitedSlice";
 import { Container, Row, Col } from "react-bootstrap";
 import "./Sandbox.css";
+
 import Buttons from "./Buttons";
 import SandboxPopup from "./SandboxPopup";
 import ProgressBar from "./Widgets/ProgressBar";
@@ -13,7 +14,7 @@ import Translator from "./Widgets/Translator/Translator";
 import WriteOutText from "./Widgets/WriteOutText";
 import ColorWriteOutText from "./Widgets/ColorWriteOutText";
 import RandomQuotes from "./Widgets/RandomQuotes/RandomQuotes";
-
+import MoveBall from "./Widgets/MoveBall";
 
 import useDocumentTitle from "../Tools/useDocumentTitle";
 
@@ -53,6 +54,11 @@ function Sandbox() {
         </Col>
         <Col className="mb-4">
           <Clock />
+        </Col>
+      </Row>
+      <Row>
+        <Col className="mb-4">
+          <MoveBall />
         </Col>
       </Row>
       <Row>
