@@ -56,11 +56,11 @@ function Sandbox() {
           <Clock />
         </Col>
       </Row>
-      <Row>
+      {/* <Row>
         <Col className="mb-4">
           <MoveBall />
         </Col>
-      </Row>
+      </Row> */}
       <Row>
         {/* <Col className="mb-4">
           <WriteOutText />
